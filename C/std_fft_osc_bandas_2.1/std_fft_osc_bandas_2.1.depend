@@ -1,0 +1,19 @@
+# depslib dependency file v1.0
+1538749780 source:d:\programas_c\std_fft_osc_bandas_2.1\main.c
+	<stdlib.h>
+	<stdio.h>
+	<time.h>
+	<windows.h>
+	<process.h>
+	<conio.h>
+	<math.h>
+	<memory.h>
+	"WD-dask64.h"
+	"fftw3.h"
+
+1462819118 c:\adlink\wd-dask\include\wd-dask64.h
+
+1394919019 c:\fftw-3.3.4-dll64\incls\fftw3.h
+	<stdio.h>
+	<stddef.h>
+

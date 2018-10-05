@@ -1,0 +1,31 @@
+Placa: 'ADLINK PCIe-9852' 
+Version: '2.9.7'
+ChunksSave: [1000] [Número de chunks que se guardan por archivo: ya sea de dato crudo o dato procesado]
+NCh: [2] [Número de canales que se adquieren. En ch0 se pone la señal del APD, en ch1 la señal de monitoreo] 
+qFreq: [1] [Factor de frecuencia de adquisición de la placa. FrecAdq: 200/qFreq [MHz/seg]] 
+Bins: [1000] [Cantidad de bines por shot adquiridos. Debe ser múltiplo de 8] 
+Delay: [7200] [Retardo en la adquisicón luego de cada trigger] 
+NShotsChk: [Cantidad de shots por chunk. Bins*NShotsChk*NCh*2bytes es el tamaño de cada chunk y el tamaño de cada uno de los buffers internos de la placa] 
+GuardaRawDataCh0: 'si' [Guarda el dato crudo del canal 0]
+GuardaRawDataCh1: 'no' [Guarda el dato crudo del canal 1]
+WindowTime: [10] [Tamaño de ventana para hacer el movingaverage en shots. Esto reduce el ruido pero también el ancho de banda del instrumento]
+WindowBin: [5] [Tamaño de ventana para hacer el movingaverage en bins (o posición). Sirve para suavizar los perfiles y se deberia ajustar según el ancho de pulso que se esté utilizando]
+WindowBinMean: [1] [Tamaño de ventana para hacer el movingaverage en bins (o posición) utilizado luego para normalizar la STD]
+GuardaSTDData: 'si' [Guarda dato procesado STD]
+Bin_mon_laser_i: [9] [Bin inicial para integrar la señal de monitoreo del láser]
+Bin_mon_laser_f: [32] [Bin final para integrar la señal de monitoreo del láser]
+Bin_mon_edfa_i: [45] [Bin inicial para integrar la señal de monitoreo del pulso amplificado edfa] 
+Bin_mon_edfa_f: [68] [Bin final para integrar la señal de monitoreo del pulso amplificado edfa] 
+Calibracion_Laser: [0.21] [Factor de calibración del fotodiodo de monitoreo para el pulso láser en W/V] 
+Calibracion_EDFA: [39] [Factor de calibración del fotodiodo de monitoreo para el pulso amplificado edfa en W/V]
+GuardaMonLaserData: 'si' [Guarda el dato procesado del monitoreo del láser, es decir la integral de la señal de monitoreo entre Bin_mon_laser_i Bin_mon_laser_f]
+GuardaMonEdfaData: 'si' [Guarda el dato procesado del monitoreo del edfa, es decir la integral de la señal de monitoreo entre Bin_mon_edfa_i Bin_mon_edfa_f]
+ChunkSalteoFFT: [0] [Chunks que se saltea el proceso FFT. Esto puede servir en caso que el proceso FFT se atrase respecto de la adquisición]
+ChunkPromedioFFT: [5] [Cantidad de FFTs promediadas. Esto sirve para reducir el ruido de la FFT y disminuir el envio de datos por pipe al graficador de python]
+ChunksPorPozo: [10] [Cantidad de chunks por pozo. Para esta versión no sirve]
+Nro. Pozos: [1] [Cantidad de pozos. Para esta versión no sirve]
+Pozo0: 'GBK980' 
+Pozo1: 'GBK981'
+Pozo2: 'GBK982' 
+AnchoPulsoNs: [100]
+FrecLaserHz: [10002]
