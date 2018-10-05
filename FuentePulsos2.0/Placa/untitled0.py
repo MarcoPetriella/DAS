@@ -1,0 +1,20 @@
+# -*- coding: utf-8 -*-
+"""
+Created on Tue Oct 24 18:35:06 2017
+
+@author: Marco
+"""
+
+import serial, time
+
+
+arduino = serial.Serial('COM4', 115200, timeout=.1)
+time.sleep(1) #give the connection a second to settle
+arduino.write("Hello from Python!")
+#while True:
+#	data = arduino.readline()
+#	if data:
+#		print data.rstrip('\n') #strip out the new lines for now
+#		# (better to do .read() in the long run for this reason
+        
+arduino.close()     
